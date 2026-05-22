@@ -1,0 +1,31 @@
+{
+  "name": "pos-system",
+  "version": "1.0.0",
+  "description": "Customizable Point of Sale System",
+  "private": true,
+  "workspaces": [
+    "apps/backend",
+    "apps/frontend",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "format": "turbo run format",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "db:migrate": "cd apps/backend && npm run db:migrate",
+    "db:seed": "cd apps/backend && npm run db:seed"
+  },
+  "devDependencies": {
+    "turbo": "^1.10.0",
+    "typescript": "^5.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
